@@ -1,10 +1,107 @@
-* {
+@charset "UTF-8";
+html {
   padding: 0;
   margin: 0;
+  line-height: 1.5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", 游ゴシック, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 10px;
 }
 
-.header p {
-  color: #ff0000;
+.is_modal {
+  margin: 3vw;
+}
+
+.is_modal_bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: table;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.is_modal_bg .is_modal_container {
+  width: auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.is_modal_bg .is_modal_container .is_modal_wrapper {
+  max-width: 56rem;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.is_modal_header h3 {
+  margin-top: 0;
+  color: #42b983;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.is_modal_body {
+  margin: 20px 0;
+}
+
+.is_modal_link {
+  overflow: hidden;
+  max-width: 410px;
+  margin: auto;
+  text-align: center;
+}
+
+.is_modal_link .is_modal_btn {
+  cursor: pointer;
+  display: inline-block;
+  background: #e6e6e6;
+  width: 180px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #000;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.modal-enter {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .is_modal_wrapper,
+.modal-leave-active .is_modal_wrapper {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=maps/style.css.map */
