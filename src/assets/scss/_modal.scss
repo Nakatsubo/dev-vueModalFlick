@@ -1,86 +1,140 @@
-.is_modal {
-    margin: 3vw;
-    // ul {
-    //     overflow: hidden;
-    //     padding: 0;
-    //     list-style: none;
-    //     li {
-    //         display: inline-block;
-    //         width: 100px;
-    //         text-align: center;
-    //         line-height: 30px;
-    //         background: #ddd;
-    //         font-size: 14px;
-    //         cursor: pointer;
-    //         transition: background 0.3s, color 0.3s;
-    //         &:hover {
-    //             color: #fff;
-    //             background: #42b983
-    //         }
-    //     }
-    // }
-}
-
 .is_modal_bg {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 9999;
+    z-index: 9998;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, .4);
     display: table;
-    transition: all .3s ease;
+    transition: all .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
     cursor: pointer;
-    .is_modal_container {
-        width: auto;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .is_modal_wrapper {
-            max-width: 56rem;
-            width: 100%;
-            height: auto;
-            padding: 2rem;
-            margin: 0 auto;
-            text-align: center;
-            background: #fff;
-            box-sizing: border-box;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
-            transition: all .5s ease;
+}
+
+.is_modal_close {
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    display: inline-flex;
+    width: 4em;
+    height: 0.1em;
+    background: #fff;
+    border-radius: 0.1em;
+    vertical-align: middle;
+    transform: rotate(45deg);
+    cursor: pointer;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        transform: rotate(90deg);
+    }
+    @include mq(sp) {
+        top: 2rem;
+        right: 2rem;
+        width: 2rem;
+    }
+}
+
+.is_modal_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.is_modal_wrapper {
+    max-width: 43rem;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin: 0 auto;
+    background: $white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+    text-align: center;
+    transition: all .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    position: relative;
+    @include mq(sp) {
+      width: calc(100% - 4rem);
+      // margin-top: 10rem;
+    }
+}
+
+.is_modal_header {
+    .is_product_img {
+        max-width: 35rem;
+        width: 100%;
+        height: auto;
+        // dummy
+        height: 35rem;
+        margin: 0 auto 1.5rem;
+        // dummy
+        background: gray;
+    }
+}
+
+.is_modal_body {
+    .is_product_name {
+        margin-bottom: 1rem;
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+    .is_product_price {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+    .is_product_description {
+        font-size: 1.6rem;
+    }
+    .is_product_link {
+        margin: 1.5rem auto;
+        a {
+            display: inline-flex;
+            padding: 1.5rem 3rem;
+            background: gray;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+    @include mq(sp) {
+        .is_product_name {
+            font-size: 2rem;
+        }
+        .is_product_price {
+            font-size: 1.6rem;
+        }
+        .is_product_description {
+            font-size: 1.4rem;
+        }
+        .is_product_link {
+            a {
+                font-size: 1.4rem;
+            }
         }
     }
 }
 
-.is_modal_header h3 {
-  margin-top: 0;
-  color: #42b983;
-  font-size: 30px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.is_modal_body {
-    margin: 20px 0;
-}
-
-.is_modal_link {
-    overflow: hidden;
-    max-width: 410px;
-    margin: auto;
-    text-align: center;
-  .is_modal_btn {
-    cursor: pointer;
-    display: inline-block;
-    background: #e6e6e6;
-    width: 180px;
-    line-height: 40px;
-    text-decoration: none;
-    color: #000;
-    margin: 0 10px;
-    font-size: 14px;
-  }
+.is_modal_footer {
+    .is_modal_link {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            li:first-of-type {
+                margin-right: 2rem;
+            }
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
 }
 
 // is_vue_modal

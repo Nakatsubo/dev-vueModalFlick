@@ -1,0 +1,27 @@
+/* ////////////////////////////////////////
+
+  layout
+
+//////////////////////////////////////// */
+.is_container {
+    @include is_layout_max_set();
+    .is_inner_container > h1 {
+        display: none;
+    }
+}
+
+.is_header {}
+
+.is_section {
+    @include is_layout_960_set();
+}
+
+.is_footer {}
+
+/* ////////////////////////////////////////
+
+  header
+
+//////////////////////////////////////// */
+
+

@@ -1,0 +1,202 @@
+////////////////////////////////////////
+
+//  mixin
+
+////////////////////////////////////////
+
+////////////////////////////////////////
+
+// font-family
+
+////////////////////////////////////////
+$font-family: 'Noto Sans JP', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 游ゴシック, YuGothic, メイリオ, Meiryo, sans-serif;
+html {
+    font-family: $font-family;
+    font-size: 10px;
+    color: #2B2B2B;
+}
+
+////////////////////////////////////////
+
+// variables
+
+////////////////////////////////////////
+// color
+$white: #FFFFFF;
+$lightgray: #DCDCDC;
+$dimgray: #C0C5C2;
+$black: #2B2B2B;
+$lightgreen: #FAFFE6;
+$green: #EBF4C2;
+$dimgreen: #EBF4C2;
+$darkgreen: #71755E;
+$ivory: #FFFFF7;
+$red: #F5B2AB;
+$blue: #438597;
+$charcole: #4E4449;
+$natural: #FCE2C4;
+$lark: #C5A05A;
+$khaki: #5F6527;
+$cream: #EAE1CF;
+
+// animation
+$transition: all .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+
+// media query
+$breakpoints: (
+    'sp': 'screen and (max-width: 768px)',
+    'tb': 'screen and (max-width: 960px)',
+) !default;
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+  }
+}
+@mixin mq($breakpoint: tb) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// mixin
+@mixin is_layout_max_set() {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    background: $white;
+}
+
+@mixin is_layout_1160_set() {
+    max-width: 116rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: $white;
+}
+
+@mixin is_layout_960_set() {
+    max-width: 96rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: $white;
+    // sp
+    @include mq() {
+        max-width: 100%;
+
+    }
+}
+
+@mixin is_layout_800_set() {
+    max-width: 80rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: $white;
+}
+
+@mixin is_layout_720_set() {
+    max-width: 80rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: $white;
+    // sp
+    @include mq() {
+        max-width: 100%;
+        width: calc(100% - 4rem);
+    }
+}
+
+@mixin is_layout_640_set() {
+    max-width: 64rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: $white;
+    // sp
+    @include mq() {
+        max-width: 100%;
+    }
+}
+
+@mixin is_layout_300_set() {
+    max-width: 30rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: $white;
+    // sp
+    @include mq() {
+        max-width: 100%;
+    }
+}
+
+@mixin is_heading_set() {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    // sp
+    @include mq() {
+        margin-bottom: .5rem;
+        //font-size: 1.6rem;
+    }
+}
+
+@mixin is_text_set() {
+    line-height: 1.5;
+    text-align: left;
+    font-size: 1.4rem;
+    @include mq() {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+@mixin is_img_set() {
+    p {
+        img {
+            max-width: 100%;
+            backface-visibility: hidden;
+        }
+    }
+    li {
+        img {
+            max-width: 100%;
+            backface-visibility: hidden;
+        }
+    }
+}
+
+@mixin is_box_shadow() {
+    a  {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        &:hover {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+@mixin is_note_set() {
+    display: inline-flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    @include mq() {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+
+////////////////////////////////////////
+
+// files
+
+////////////////////////////////////////
+
+@import '_reset.scss';
+@import '_common.scss';
+@import '_modal.scss';

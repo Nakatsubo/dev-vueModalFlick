@@ -3,7 +3,7 @@ Vue.component('modal-case01', {
       <template>
           <transition name="modal">
               <div class="is_modal_bg">
-                  <div class="is_modal_close" @click.self="$emit('close')">Dummy Close</div>
+                  <div class="is_modal_close" @click.self="$emit('close')"></div>
                   <div class="is_modal_container" @click.self="$emit('close')">
                       <div class="is_modal_wrapper">
                           <div class="is_modal_header">
@@ -28,7 +28,7 @@ Vue.component('modal-case02', {
     <template>
         <transition name="modal">
             <div class="is_modal_bg">
-                <div class="is_modal_close" @click.self="$emit('close')">Dummy Close</div>
+                <div class="is_modal_close" @click.self="$emit('close')"></div>
                 <div class="is_modal_container" @click.self="$emit('close')">
                     <div class="is_modal_wrapper">
                         <div class="is_modal_header">
@@ -53,7 +53,7 @@ Vue.component('modal-case03', {
     <template>
         <transition name="modal">
             <div class="is_modal_bg">
-                <div class="is_modal_close" @click.self="$emit('close')">Dummy Close</div>
+                <div class="is_modal_close" @click.self="$emit('close')"></div>
                 <div class="is_modal_container" @click.self="$emit('close')">
                     <div class="is_modal_wrapper">
                         <div class="is_modal_header">
@@ -78,7 +78,7 @@ Vue.component('modal-case04', {
     <template>
         <transition name="modal">
             <div class="is_modal_bg">
-                <div class="is_modal_close" @click.self="$emit('close')">Dummy Close</div>
+                <div class="is_modal_close" @click.self="$emit('close')"></div>
                 <div class="is_modal_container" @click.self="$emit('close')">
                     <div class="is_modal_wrapper">
                         <div class="is_modal_header">
@@ -103,7 +103,7 @@ Vue.component('modal-case05', {
     <template>
         <transition name="modal">
             <div class="is_modal_bg">
-                <div class="is_modal_close" @click.self="$emit('close')">Dummy Close</div>
+                <div class="is_modal_close" @click.self="$emit('close')"></div>
                 <div class="is_modal_container" @click.self="$emit('close')">
                     <div class="is_modal_wrapper">
                         <div class="is_modal_header">
@@ -128,7 +128,7 @@ Vue.component('modal-case06', {
     <template>
         <transition name="modal">
             <div class="is_modal_bg">
-                <div class="is_modal_close" @click.self="$emit('close')">Dummy Close</div>
+                <div class="is_modal_close" @click.self="$emit('close')"></div>
                 <div class="is_modal_container" @click.self="$emit('close')">
                     <div class="is_modal_wrapper">
                         <div class="is_modal_header">
