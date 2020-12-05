@@ -1,9 +1,4 @@
-// importのテスト
-@import '_reset';
+@charset 'utf-8';
 
-// ネストのテスト
-.header {
-  p {
-    color: $red;
-  }
-}
+@import '_reset';
+@import '_modal';
