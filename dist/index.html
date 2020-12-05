@@ -1,16 +1,416 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge' /><![endif]-->
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Moadl Test by Vue.js</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://rockinstar.jp/">
+    <meta property="og:image" content="http://rockinstar.jp/ogp.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/de4035cdd1.js"></script>
     <script src="assets/js/index.js"></script>
-    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>テスト</h1>
+    <div class="is_container" id="is_container">
+      <div class="is_inner_container inner">
+        <!-- display none -->
+        <h1>h1 is title</h1>
+        <!-- end display none -->
+
+        <!-- header start -->
+        <header class="is_header" id="is_header">
+          <div class="is_inner_header inner">
+            <div class="is_key_mv_area">
+              <div class="is_inner_key_mv_area">
+                <p>
+                  <img src="/assets/img/" alt=""></p>
+              </div>
+            </div>
+            <!-- nav start -->
+            <!-- nav class="is_nav" id="is_nav">
+              <div class="is_inner_nav inner">
+                <ul class="is_left_nav">
+                  <li></li>
+                </ul>
+                <ul class="is_right_nav">
+                  <li></li>
+                </ul>
+              </div> -->
+            <!-- nav end -->
+          </div>
+        </header>
+        <!-- header end -->
+
+        <!-- section start -->
+        <section class="is_section" id="is_section">
+          <div class="is_inner_section inner">
+            <div class="is_about_area">
+              <div class="is_inner_about_area inner">
+                <div class="is_summary_area">
+                  <div class="is_inner_sumamry_area">
+                    <h1 class="is_ttl">h1 is title</h1>
+                    <p class="is_lead">p is lead</p>
+                  </div>
+                </div>
+                <div class="is_introduce_area">
+                  <div class="is_inner_introduce_area inner">
+                    <div class="is_head_area"></div>
+                    <div class="is_body_area"></div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- is_about -->
+
+            <!-- case01 -->
+            <article class="is_article case01" id="case01">
+              <div class="is_inner_article inner">
+                <div class="is_head_ara">
+                  <div class="is_inner_head_area inner">
+                    <div class="is_heading">
+                      <p class="is_logo">
+                        <img src="" alt="">
+                      </p>
+                      <h2 class="is_category_tit">
+                        <span>h2 is category title</span>
+                      </h2>
+                      <p class="is_note">
+                        p is category title note
+                      </p>
+                    </div>
+                    <div class="is_mv pc">
+                      <p>
+                        <img src="" alt="">
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- is_head_area -->
+                <div class="is_body_area">
+                  <div class="is_inner_body_area">
+                    <div class="is_topic_area type_b">
+                      <div class="is_inner_topic_area inner">
+                        <div class="is_point">
+                          <div class="is_center">
+                            <h3>h3 is sub category title</h3>
+                            <p>p is sub category_text</p>
+                          </div>
+                          <div class="is_left">
+                            <p>p is sub category number</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="is_product_list_area type_b">
+                      <div class="is_inner_product_list_area">
+                        <h3 class="is_product_heading">
+                          <span>h3 is product heading</span>
+                          <img src="" alt="">
+                        </h3>
+                        <ul>
+                          <a href="">
+                            <li class="is_product">
+                              <h4 class="is_product_name">h4 is product name</h4>
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </li>
+                          </a>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- is_body_area -->
+              </div>
+            </article>
+            <!-- case01 -->
+
+            <!-- case02 -->
+            <article class="is_article case02" id="case02">
+              <div class="is_inner_article inner">
+                <div class="is_head_ara">
+                  <div class="is_inner_head_area inner">
+                    <div class="is_heading">
+                      <p class="is_logo">
+                        <img src="" alt="">
+                      </p>
+                      <h2 class="is_category_tit">
+                        <span>h2 is category title</span>
+                      </h2>
+                      <p class="is_note">
+                        p is category title note
+                      </p>
+                    </div>
+                    <div class="is_mv pc">
+                      <p>
+                        <img src="" alt="">
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- is_head_area -->
+                <div class="is_body_area">
+                  <div class="is_inner_body_area">
+                    <div class="is_topic_area type_b">
+                      <div class="is_inner_topic_area inner">
+                        <div class="is_point">
+                          <div class="is_center">
+                            <h3>h3 is sub category title</h3>
+                            <p>p is sub category_text</p>
+                          </div>
+                          <div class="is_left">
+                            <p>p is sub category number</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="is_product_list_area type_b">
+                      <div class="is_inner_product_list_area">
+                        <h3 class="is_product_heading">
+                          <span>h3 is product heading</span>
+                          <img src="" alt="">
+                        </h3>
+                        <ul>
+                          <a href="">
+                            <li class="is_product">
+                              <h4 class="is_product_name">h4 is product name</h4>
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </li>
+                          </a>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- is_body_area -->
+              </div>
+            </article>
+            <!-- case02 -->
+
+            <!-- case03 -->
+            <article class="is_article case03" id="case03">
+              <div class="is_inner_article inner">
+                <div class="is_head_ara">
+                  <div class="is_inner_head_area inner">
+                    <div class="is_heading">
+                      <p class="is_logo">
+                        <img src="" alt="">
+                      </p>
+                      <h2 class="is_category_tit">
+                        <span>h2 is category title</span>
+                      </h2>
+                      <p class="is_note">
+                        p is category title note
+                      </p>
+                    </div>
+                    <div class="is_mv pc">
+                      <p>
+                        <img src="" alt="">
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- is_head_area -->
+                <div class="is_body_area">
+                  <div class="is_inner_body_area">
+                    <div class="is_topic_area type_b">
+                      <div class="is_inner_topic_area inner">
+                        <div class="is_point">
+                          <div class="is_center">
+                            <h3>h3 is sub category title</h3>
+                            <p>p is sub category_text</p>
+                          </div>
+                          <div class="is_left">
+                            <p>p is sub category number</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="is_product_list_area type_b">
+                      <div class="is_inner_product_list_area">
+                        <h3 class="is_product_heading">
+                          <span>h3 is product heading</span>
+                          <img src="" alt="">
+                        </h3>
+                        <ul>
+                          <a href="">
+                            <li class="is_product">
+                              <h4 class="is_product_name">h4 is product name</h4>
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </li>
+                          </a>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- is_body_area -->
+              </div>
+            </article>
+            <!-- case03 -->
+
+            <!-- is_product_list_area -->
+            <div class="is_product_list_area" id="is_product">
+              <div class="is_inner_product_list_area inner">
+                <div class="is_head_area">
+                  <div class="is_inner_head_area">
+                    <h2>
+                      <strong>h2 is product list title</strong>
+                      <span></span>
+                    </h2>
+                  </div>
+                </div>
+                <div class="is_body_area">
+                  <div class="is_inner_body_area">
+                    <ul>
+                      <!-- is_product_list start-->
+                      <li class="is_product_list">
+                        <div class="is_product_top">
+                          <p class="is_product_img">
+                            <img src="" alt="">
+                          </p>
+                          <h3 class="is_product_name">h3 is product name</h3>
+                        </div>
+                        <div class="is_product_bottom">
+                          <div class="is_product_price">
+                            <p>p is product price</p>
+                          </div>
+                          <div class="is_product_link">
+                            <a href="">
+                              <p>p is product link</p>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- is_product_list start-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><!-- is_product_list_area -->
+
+            <!-- is_about_xxx_area -->
+            <!-- <article class="is_about_xxx_area">
+              <div class="is_inner_about_xxx_area">
+                <a href="" class="is_xxx_card">
+                  <ul>
+                    <li class="is_xxx_left">
+                      <p>
+                        <img src="" alt="">
+                      </p>
+                    </li>
+                    <li class="is_xxx_right">
+                      <h2 class="is_ttl">h2 is title</h2>
+                      <p class="is_txt">p is text</p>
+                    </li>
+                  </ul>
+                </a>
+              </div>
+            </article> -->
+            <!-- is_about_xxx_area -->
+
+            <!-- is_aside -->
+            <aside class="is_aside" id="is_aside">
+              <div class="is_inner_aside inner">
+
+                <div class="is_sns_area">
+                  <div class="is_inner_sns_area">
+                    <div class="is_ttl">
+                      <h2>
+                        <span>h2 is sns title</span>
+                        <img src="" alt="">
+                      </h2>
+                    </div>
+                    <div class="is_img">
+                      <ul>
+                        <a href="">
+                          <li>
+                            <img src="" alt="">
+                          </li>
+                        </a>
+                      </ul>
+                    </div>
+                    <div class="is_txt">
+                      <p>p is sns text</p>
+                    </div>
+                  </div>
+                </div><!-- is_sns_area-->
+
+                <div class="is_bnr_area">
+                  <div class="is_inner_bnr_area">
+                    <div class="is_ttl">
+                      <h2>
+                        <span>h2 is bnr title</span>
+                        <img src="" alt="">
+                      </h2>
+                    </div>
+                    <div class="is_txt">
+                      <p>p is sns text</p>
+                    </div>
+                    <div class="is_img">
+                      <ul>
+                        <a href="">
+                          <li>
+                            <img src="" alt="">
+                          </li>
+                        </a>
+                      </ul>
+                    </div>
+                  </div>
+                </div><!-- is_sns_area-->
+
+              </div>
+            </aside>
+            <!-- is_aside -->
+
+          </div>
+        </section>
+        <!-- section end -->
+
+        <!-- footer start -->
+        <!-- <footer class="is_footer" id="footer">
+           <div class="is_inner_footer">
+             <nav class="is_sub_nav">
+               <ul class="is_left_nav">
+                 <a href="">
+                   <li></li>
+                 </a>
+               </ul>
+               <ul class="is_right_nav">
+                 <li>
+                   <small>small is copyright</small>
+                 </li>
+               </ul>
+             </nav>
+           </div>
+        </footer> -->
+        <!-- footer end -->
+
+        <!-- is_to_top -->
+        <!-- <div class="is_to_top" id="is_to_top">
+          <a href="#is_container">
+            <p>
+              <img src="" alt="">
+            </p>
+          </a>
+        </div>--><!-- is_to_top -->
+
+      </div><!-- is_inner_container -->
+    </div><!-- container -->
+
+    <!-- javascript files -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script><script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
