@@ -1,0 +1,9 @@
+// importのテスト
+@import '_reset';
+
+// ネストのテスト
+.header {
+  p {
+    color: $red;
+  }
+}
