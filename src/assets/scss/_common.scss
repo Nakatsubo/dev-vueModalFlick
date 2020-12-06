@@ -14,11 +14,18 @@
 .is_header {}
 
 .is_section {
-    @include is_layout_960_set();
+    @include is_layout_max_set();
     margin: 8rem auto;
     @include mq(sp) {
         margin: 4rem auto;
     }
+}
+
+.is_aside {
+    @include is_layout_max_set();
+    padding-top: 8rem;
+    border-top: 1px solid $dimgray;
+    margin: 8rem auto;
 }
 
 .is_footer {}
@@ -39,3 +46,87 @@
         background: gray;
     }
 }
+
+/* ////////////////////////////////////////
+
+//  aside
+
+//////////////////////////////////////// */
+
+// is_sns_area
+.is_sns_area {
+    @include is_layout_960_set();
+    margin: 8rem auto;
+    text-align: center;
+    .is_ttl {
+        h2 {
+            span {
+               display: none;
+            }
+        }
+    }
+    .is_txt {
+      margin: 4rem auto;
+      font-size: 1.6rem;
+    }
+    .is_img {
+        margin: 4rem auto;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            a {
+                display: inline-flex;
+                width: calc(100% / 4);
+                height: auto;
+                // dummmy
+                height: 24rem;
+                background: gray;
+                cursor: pointer;
+            }
+        }
+    }
+    @include mq(sp) {
+        margin: 4rem auto;
+        .is_txt {
+            font-size: 1.4rem;
+        }
+        .is_img {
+            ul {
+                a {
+                    width: calc(100% / 2);
+                }
+            }
+        }
+    }
+}
+
+// is_bnr_area
+.is_bnr_area {
+    @include is_layout_960_set();
+    margin: 8rem auto;
+    text-align: center;
+    .is_ttl {
+        h2 {
+            span {
+                display: none;
+            }
+        }
+    }
+    .is_txt {
+        font-size: 1.6rem;
+    }
+    @include mq(sp) {
+        margin: 4rem auto;
+        .is_txt {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/* ////////////////////////////////////////
+
+//  footer
+
+//////////////////////////////////////// */

@@ -72,6 +72,11 @@ $breakpoints: (
     height: auto;
     margin: 0 auto;
     background: $white;
+    // sp
+    @include mq() {
+      max-width: 100%;
+      width: calc(100% - 4rem);
+    }
 }
 
 @mixin is_layout_960_set() {
@@ -96,7 +101,6 @@ $breakpoints: (
     // sp
     @include mq() {
       max-width: 100%;
-      width: calc(100% - 4rem);
   }
 }
 
@@ -109,7 +113,6 @@ $breakpoints: (
     // sp
     @include mq() {
         max-width: 100%;
-        width: calc(100% - 4rem);
     }
 }
 
@@ -122,7 +125,6 @@ $breakpoints: (
     // sp
     @include mq() {
       max-width: 100%;
-      width: calc(100% - 4rem);
     }
 }
 
@@ -135,7 +137,6 @@ $breakpoints: (
     // sp
     @include mq() {
       max-width: 100%;
-      width: calc(100% - 4rem);
     }
 }
 

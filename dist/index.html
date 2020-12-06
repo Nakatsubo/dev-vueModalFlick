@@ -150,12 +150,16 @@
                     <div class="is_product_list_area type_b">
                       <div class="is_inner_product_list_area">
                         <h3 class="is_product_heading">
-                          <span>h3 is product heading</span>
+                          <span>h3 is product heading image</span>
                           <img src="" alt="">
                         </h3>
                         <!-- modal-case01 -->
                         <div id="modal-case01" class="is_modal is_modal_case01">
-                          <ul class="is_product_list modal_area">
+                          <p class="is_product_sub_heading">
+                            <span>product heading</span>
+                            <img src="" alt="">
+                          </p>
+                          <ul class="is_product_list is_col_2 modal_area">
                             <li class="is_product" @click="showModal = 1">
                               <h4 class="is_product_name">
                                 <span>h4 is product01 name</span>
@@ -172,6 +176,12 @@
                                 <img src="" alt="">
                               </p>
                             </li>
+                          </ul>
+                          <p class="is_product_sub_heading">
+                            <span>product heading</span>
+                            <img src="" alt="">
+                          </p>
+                          <ul class="is_product_list is_col_2 modal_area">
                             <li class="is_product" @click="showModal = 3">
                               <h4 class="is_product_name">
                                 h4 is product03 name
@@ -191,24 +201,24 @@
                           </ul>
                           <!-- modal-case01 content -->
                           <modal-case01 v-if="showModal == '1'" @close="showModal = false" :key="1">
-                              <div slot="header">
-                                <p class="is_product_img">
-                                  <img src="" alt="">
-                                </p>
-                              </div>
-                              <div slot="body">
-                                <p class="is_product_name">Dummy Name</p>
-                                <p class="is_product_price">9,999</p>
-                                <p class="is_product_description">Dummy Description</p>
-                                <p class="is_product_link">
-                                  <a href="">Dummy Link</a>
-                                </p>
-                              </div>
-                              <div class="is_modal_link" slot="footer">
-                                <p class="is_modal_btn" @click="showModal = 2">
-                                  NEXT
-                                </p>
-                              </div>
+                            <div slot="header">
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </div>
+                            <div slot="body">
+                              <p class="is_product_name">Dummy Name</p>
+                              <p class="is_product_price">9,999</p>
+                              <p class="is_product_description">Dummy Description</p>
+                              <p class="is_product_link">
+                                <a href="">Dummy Link</a>
+                              </p>
+                            </div>
+                            <div class="is_modal_link" slot="footer">
+                              <p class="is_modal_btn" @click="showModal = 2">
+                                NEXT
+                              </p>
+                            </div>
                           </modal-case01>
                           <modal-case01 v-else-if="showModal == '2'" @close="showModal = false" :key="2">
                             <div slot="header">
@@ -230,48 +240,48 @@
                                 <li class="is_modal_btn" @click="showModal = 3">NEXT</li>
                               </ul>
                             </div>
-                        </modal-case01>
-                        <modal-case01 v-else-if="showModal == '3'" @close="showModal = false" :key="3">
-                          <div slot="header">
-                            <p class="is_product_img">
-                              <img src="" alt="">
-                            </p>
-                          </div>
-                          <div slot="body">
-                            <p class="is_product_name">Dummy Name</p>
-                            <p class="is_product_price">9,999</p>
-                            <p class="is_product_description">Dummy Description</p>
-                            <p class="is_product_link">
-                              <a href="">Dummy Link</a>
-                            </p>
-                          </div>
-                          <div class="is_modal_link" slot="footer">
-                            <ul>
-                              <li class="is_modal_btn" @click="showModal = 2">PREV</li>
-                              <li class="is_modal_btn" @click="showModal = 4">NEXT</li>
-                            </ul>
-                          </div>
-                        </modal-case01>
-                        <modal-case01 v-else-if="showModal == '4'" @close="showModal = false" :key="4">
-                          <div slot="header">
-                            <p class="is_product_img">
-                              <img src="" alt="">
-                            </p>
-                          </div>
-                          <div slot="body">
-                            <p class="is_product_name">Dummy Name</p>
-                            <p class="is_product_price">9,999</p>
-                            <p class="is_product_description">Dummy Description</p>
-                            <p class="is_product_link">
-                              <a href="">Dummy Link</a>
-                            </p>
-                          </div>
-                          <div class="is_modal_link" slot="footer">
-                            <p class="is_modal_btn" @click="showModal = 3">
-                              PREV
-                            </p>
-                          </div>
-                        </modal-case01>
+                          </modal-case01>
+                          <modal-case01 v-else-if="showModal == '3'" @close="showModal = false" :key="3">
+                            <div slot="header">
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </div>
+                            <div slot="body">
+                              <p class="is_product_name">Dummy Name</p>
+                              <p class="is_product_price">9,999</p>
+                              <p class="is_product_description">Dummy Description</p>
+                              <p class="is_product_link">
+                                <a href="">Dummy Link</a>
+                              </p>
+                            </div>
+                            <div class="is_modal_link" slot="footer">
+                              <ul>
+                                <li class="is_modal_btn" @click="showModal = 2">PREV</li>
+                                <li class="is_modal_btn" @click="showModal = 4">NEXT</li>
+                              </ul>
+                            </div>
+                          </modal-case01>
+                          <modal-case01 v-else-if="showModal == '4'" @close="showModal = false" :key="4">
+                            <div slot="header">
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </div>
+                            <div slot="body">
+                              <p class="is_product_name">Dummy Name</p>
+                              <p class="is_product_price">9,999</p>
+                              <p class="is_product_description">Dummy Description</p>
+                              <p class="is_product_link">
+                                <a href="">Dummy Link</a>
+                              </p>
+                            </div>
+                            <div class="is_modal_link" slot="footer">
+                              <p class="is_modal_btn" @click="showModal = 3">
+                                PREV
+                              </p>
+                            </div>
+                          </modal-case01>
                         </div><!-- modal -->
                       </div>
                     </div>
@@ -279,7 +289,7 @@
                 </div><!-- is_body_area -->
 
                 <!-- topic01_02 -->
-                <div class="is_body_area">
+                <div class="is_body_area is_bottom">
                   <div class="is_inner_body_area">
                     <div class="is_topic_area type_b">
                       <div class="is_inner_topic_area inner">
@@ -297,36 +307,46 @@
                     <div class="is_product_list_area type_b">
                       <div class="is_inner_product_list_area">
                         <h3 class="is_product_heading">
-                          <span>h3 is product heading</span>
+                          <span>h3 is product heading image</span>
                           <img src="" alt="">
                         </h3>
                         <!-- modal-case02 -->
                         <div id="modal-case02" class="is_modal is_modal_case02">
-                          <ul class="is_product_list modal_area">
-                              <li class="is_product" @click="showModal = 1">
-                                <h4 class="is_product_name">
-                                  <span>h4 is product01 name</span>
-                                </h4>
-                                <p class="is_product_img">
-                                  <img src="" alt="">
-                                </p>
-                              </li>
-                              <li class="is_product" @click="showModal = 2">
-                                <h4 class="is_product_name">
-                                  h4 is product02 name
-                                </h4>
-                                <p class="is_product_img">
-                                  <img src="" alt="">
-                                </p>
-                              </li>
-                              <li class="is_product" @click="showModal = 3">
-                                <h4 class="is_product_name">
-                                  h4 is product03 name
-                                </h4>
-                                <p class="is_product_img">
-                                  <img src="" alt="">
-                                </p>
-                              </li>
+                          <p class="is_product_sub_heading">
+                            <span>product heading</span>
+                            <img src="" alt="">
+                          </p>
+                          <ul class="is_product_list is_col_2 modal_area">
+                            <li class="is_product" @click="showModal = 1">
+                              <h4 class="is_product_name">
+                                <span>h4 is product01 name</span>
+                              </h4>
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </li>
+                            <li class="is_product" @click="showModal = 2">
+                              <h4 class="is_product_name">
+                                h4 is product02 name
+                              </h4>
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </li>
+                          </ul>
+                          <p class="is_product_sub_heading">
+                            <span>product heading</span>
+                            <img src="" alt="">
+                          </p>
+                          <ul class="is_product_list is_col_1 modal_area">
+                            <li class="is_product" @click="showModal = 3">
+                              <h4 class="is_product_name">
+                                h4 is product03 name
+                              </h4>
+                              <p class="is_product_img">
+                                <img src="" alt="">
+                              </p>
+                            </li>
                           </ul>
                           <!-- modal-case01 content -->
                           <modal-case02 v-if="showModal == '1'" @close="showModal = false" :key="1">
@@ -452,7 +472,7 @@
                         </h3>
                         <!-- modal-case03 -->
                         <div id="modal-case03" class="is_modal is_modal_case03">
-                          <ul class="is_product_list modal_area">
+                          <ul class="is_product_list is_col_3 modal_area">
                             <li class="is_product" @click="showModal = 1">
                               <h4 class="is_product_name">
                                 <span>h4 is product01 name</span>
@@ -658,7 +678,7 @@
                         </h3>
                         <!-- modal-case04 -->
                         <div id="modal-case04" class="is_modal is_modal_case04">
-                          <ul class="is_product_list modal_area">
+                          <ul class="is_product_list is_col_2 modal_area">
                             <li class="is_product" @click="showModal = 1">
                               <h4 class="is_product_name">
                                 <span>h4 is product01 name</span>
@@ -782,7 +802,7 @@
                 </div><!-- is_body_area -->
 
                 <!-- topic01_05 -->
-                <div class="is_body_area">
+                <div class="is_body_area is_bottom">
                   <div class="is_inner_body_area">
                     <div class="is_topic_area type_b">
                       <div class="is_inner_topic_area inner">
@@ -805,7 +825,7 @@
                         </h3>
                         <!-- modal-case05 -->
                         <div id="modal-case05" class="is_modal is_modal_case05">
-                          <ul class="is_product_list modal_area">
+                          <ul class="is_product_list is_col_2 modal_area">
                               <li class="is_product" @click="showModal = 1">
                                 <h4 class="is_product_name">
                                   <span>h4 is product01 name</span>
@@ -933,7 +953,7 @@
                 </div><!-- is_head_area -->
 
                 <!-- topic03_01 -->
-                <div class="is_body_area">
+                <div class="is_body_area is_bottom">
                   <div class="is_inner_body_area">
                     <div class="is_topic_area type_b">
                       <div class="is_inner_topic_area inner">
@@ -956,7 +976,7 @@
                         </h3>
                         <!-- modal-case06 -->
                         <div id="modal-case06" class="is_modal is_modal_case06">
-                          <ul class="is_product_list modal_area">
+                          <ul class="is_product_list is_col_2 modal_area">
                             <li class="is_product" @click="showModal = 1">
                               <h4 class="is_product_name">
                                 <span>h4 is product01 name</span>
@@ -990,7 +1010,7 @@
                               </p>
                             </li>
                           </ul>
-                          <!-- modal-case01 content -->
+                          <!-- modal-case06 content -->
                           <modal-case06 v-if="showModal == '1'" @close="showModal = false" :key="1">
                               <div slot="header">
                                 <p class="is_product_img">
@@ -1163,6 +1183,21 @@
                             <img src="" alt="">
                           </li>
                         </a>
+                        <a href="">
+                          <li>
+                            <img src="" alt="">
+                          </li>
+                        </a>
+                        <a href="">
+                          <li>
+                            <img src="" alt="">
+                          </li>
+                        </a>
+                        <a href="">
+                          <li>
+                            <img src="" alt="">
+                          </li>
+                        </a>
                       </ul>
                     </div>
                     <div class="is_txt">
@@ -1236,6 +1271,7 @@
     <!-- javascript files -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="/assets/js/script.js"></script>
   </body>
 </html>
