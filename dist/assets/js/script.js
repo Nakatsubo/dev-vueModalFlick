@@ -189,4 +189,3 @@ new Vue({
       showModal: false,
   }
 })
-

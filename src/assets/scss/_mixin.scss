@@ -72,6 +72,11 @@ $breakpoints: (
     height: auto;
     margin: 0 auto;
     background: $white;
+    // sp
+    @include mq() {
+      max-width: 100%;
+      width: calc(100% - 4rem);
+    }
 }
 
 @mixin is_layout_960_set() {
@@ -96,12 +101,11 @@ $breakpoints: (
     // sp
     @include mq() {
       max-width: 100%;
-      width: calc(100% - 4rem);
   }
 }
 
 @mixin is_layout_720_set() {
-    max-width: 80rem;
+    max-width: 72rem;
     width: 100%;
     height: auto;
     margin: 0 auto;
@@ -109,7 +113,6 @@ $breakpoints: (
     // sp
     @include mq() {
         max-width: 100%;
-        width: calc(100% - 4rem);
     }
 }
 
@@ -122,7 +125,6 @@ $breakpoints: (
     // sp
     @include mq() {
       max-width: 100%;
-      width: calc(100% - 4rem);
     }
 }
 
@@ -135,7 +137,6 @@ $breakpoints: (
     // sp
     @include mq() {
       max-width: 100%;
-      width: calc(100% - 4rem);
     }
 }
 
@@ -177,9 +178,10 @@ $breakpoints: (
 
 @mixin is_box_shadow() {
     a  {
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: $transition;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         &:hover {
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.6);
         }
     }
 }
