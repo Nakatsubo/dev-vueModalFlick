@@ -12,7 +12,7 @@
         .is_summary_area {
             .is_ttl {
                 margin-bottom: 1.5rem;
-                font-size: 2rem;
+                font-size: 2.4rem;
                 font-weight: 600;
             }
             .is_lead {
@@ -29,33 +29,31 @@
 .is_menu_area {
     margin: 6rem auto;
     text-align: center;
-    .inner {
-        .is_head_area {
-            margin-bottom: 3rem;
-        }
-        .is_body_area {
-            ul {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                @include is_box_shadow();
-                a {
-                    display: inline-flex;
-                    margin-right: 2rem;
-                    width: 16rem;
-                    height: auto;
-                    // dummy
-                    height: 16rem;
-                    background: gray;
-                    border-radius: 8rem;
-                    &:last-of-type {
-                        margin-right: 0;
-                    }
-                    img {
-                        transform: scale(1);
-                        &:hover {
-                          transform: scale(1.1);
-                        }
+    .is_head_area {
+        margin-bottom: 3rem;
+    }
+    .is_body_area {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include is_box_shadow();
+            a {
+                display: inline-flex;
+                margin-right: 2rem;
+                width: 16rem;
+                height: auto;
+                // dummy
+                height: 16rem;
+                background: gray;
+                border-radius: 8rem;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                img {
+                    transform: scale(1);
+                    &:hover {
+                      transform: scale(1.1);
                     }
                 }
             }
@@ -63,15 +61,13 @@
     }
     @include mq(sp) {
         margin: 4rem auto;
-        .inner {
-            .is_body_area {
-                ul {
-                    a {
-                        width: 10rem;
-                        //dummy
-                        height: 10rem;
-                        border-radius: 6rem;
-                    }
+        .is_body_area {
+            ul {
+                a {
+                    width: 10rem;
+                    //dummy
+                    height: 10rem;
+                    border-radius: 6rem;
                 }
             }
         }
@@ -82,7 +78,12 @@
 .is_article {
     margin: 6rem auto;
     text-align: center;
+}
+
+// is_article > is_head_area
+.is_article {
     .is_head_area {
+        margin: 4rem auto;
         .is_heading {
             padding: 1rem 1.5rem;
             border-top: 2px solid $black;
@@ -93,7 +94,7 @@
             align-items: center;
             .is_category_tit {
                 padding: 1rem 2rem;
-                font-size: 2rem;
+                font-size: 2.4rem;
                 font-weight: 600;
             }
             .is_border_left, .is_border_right {
@@ -109,6 +110,7 @@
                     padding-top: 2rem;
                     position: relative;
                     &:after {
+                        // dummy
                         content: 'Dummy Image';
                         position: absolute;
                         top: 0;
@@ -119,6 +121,7 @@
                     padding-bottom: 2rem;
                     position: relative;
                     &:before {
+                      // dummy
                       content: 'Dummy Image';
                       position: absolute;
                       bottom: 0;
@@ -127,16 +130,92 @@
                 }
             }
         }
+        .is_mv {
+            @include is_layout_720_set();
+            @include is_img_set();
+            // dummy
+            p {
+                width: 72rem;
+                height: 48rem;
+                background: gray;
+            }
+        }
     }
     @include mq(sp) {
         .is_head_area {
             .is_heading {
+                .is_border_right {
+                    display: none;
+                }
                 .is_note {
                     &.right {
                         display: none;
                     }
                 }
             }
+            .is_mv {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// is_article > .is_body_area
+.is_article {
+    .is_body_area {
+        @include is_layout_720_set();
+        padding-bottom: 6rem;
+        border-bottom: 1px dotted $dimgray;
+        margin: 4rem auto 6rem;
+        &:last-of-type {
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 8rem;
+        }
+        .is_topic_area {
+            margin: 4rem auto;
+            .is_point {
+                position: relative;
+                .is_center {
+                    h3 {
+                        margin-bottom: 3rem;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        position: relative;
+                        &:after {
+                            // dummy
+                            content: url();
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                    p {
+                        margin: 3rem auto;
+                        font-size: 1.6rem;
+                    }
+                }
+                .is_left {
+                    padding-right: 3rem;
+                    position: absolute;
+                    top: 25%;
+                    left: 25%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .is_product_list_area {
+            .is_product_heading {
+                margin: 4rem auto 3rem;
+                font-size: 2rem;
+                font-weight: 600;
+                color: $dimgray;
+            }
+        }
+    }
+    @include mq(sp) {
+        .is_body_area {
+            width: 100%;
         }
     }
 }
