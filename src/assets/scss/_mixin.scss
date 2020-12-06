@@ -177,9 +177,10 @@ $breakpoints: (
 
 @mixin is_box_shadow() {
     a  {
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: $transition;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         &:hover {
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.6);
         }
     }
 }

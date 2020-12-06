@@ -3,6 +3,7 @@
 //  layout
 
 //////////////////////////////////////// */
+
 .is_container {
     @include is_layout_max_set();
     .is_inner_container > h1 {
@@ -14,6 +15,10 @@
 
 .is_section {
     @include is_layout_960_set();
+    margin: 8rem auto;
+    @include mq(sp) {
+        margin: 4rem auto;
+    }
 }
 
 .is_footer {}
@@ -24,4 +29,13 @@
 
 //////////////////////////////////////// */
 
-
+// is_key_mv_area
+.is_key_mv_area {
+    @include is_img_set();
+    //dummy
+    p {
+        width: 144rem;
+        height: 96rem;
+        background: gray;
+    }
+}

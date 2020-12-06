@@ -1,0 +1,142 @@
+/* ////////////////////////////////////////
+
+//  section
+
+//////////////////////////////////////// */
+
+// is_about_area
+.is_about_area {
+    margin: 6rem auto;
+    text-align: center;
+    .inner {
+        .is_summary_area {
+            .is_ttl {
+                margin-bottom: 1.5rem;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            .is_lead {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    @include mq(sp) {
+        margin: 4rem auto;
+    }
+}
+
+// is_menu_area
+.is_menu_area {
+    margin: 6rem auto;
+    text-align: center;
+    .inner {
+        .is_head_area {
+            margin-bottom: 3rem;
+        }
+        .is_body_area {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include is_box_shadow();
+                a {
+                    display: inline-flex;
+                    margin-right: 2rem;
+                    width: 16rem;
+                    height: auto;
+                    // dummy
+                    height: 16rem;
+                    background: gray;
+                    border-radius: 8rem;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                    img {
+                        transform: scale(1);
+                        &:hover {
+                          transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq(sp) {
+        margin: 4rem auto;
+        .inner {
+            .is_body_area {
+                ul {
+                    a {
+                        width: 10rem;
+                        //dummy
+                        height: 10rem;
+                        border-radius: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// is_article
+.is_article {
+    margin: 6rem auto;
+    text-align: center;
+    .is_head_area {
+        .is_heading {
+            padding: 1rem 1.5rem;
+            border-top: 2px solid $black;
+            border-bottom: 2px solid $black;
+            margin: 1rem 0 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .is_category_tit {
+                padding: 1rem 2rem;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            .is_border_left, .is_border_right {
+              display: inline-flex;
+              height: 4rem;
+              border-left: 2px solid #000;
+              transform: rotate(30deg);
+            }
+            .is_note {
+                font-size: 1.2rem;
+                font-weight: 600;
+                &.left {
+                    padding-top: 2rem;
+                    position: relative;
+                    &:after {
+                        content: 'Dummy Image';
+                        position: absolute;
+                        top: 0;
+                        right: -10rem;
+                    }
+                }
+                &.right {
+                    padding-bottom: 2rem;
+                    position: relative;
+                    &:before {
+                      content: 'Dummy Image';
+                      position: absolute;
+                      bottom: 0;
+                      left: -10rem;
+                  }
+                }
+            }
+        }
+    }
+    @include mq(sp) {
+        .is_head_area {
+            .is_heading {
+                .is_note {
+                    &.right {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
